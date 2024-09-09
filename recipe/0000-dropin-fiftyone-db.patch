@@ -44,6 +44,7 @@ index f8ac8e32f..c3e8ab462 100644
      "tabulate",
      "xmltodict",
      "universal-analytics-python3>=1.0.1,<2",
+     "pydash",
      # internal packages
      "fiftyone-brain>=0.17.0,<0.18",
 -    "fiftyone-db>=0.4,<2.0",
