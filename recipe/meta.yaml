@@ -1,5 +1,5 @@
 {% set name = "fiftyone" %}
-{% set version = "0.24.1" %}
+{% set version = "0.25.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fiftyone-{{ version }}.tar.gz
-  sha256: 451b4f24496ee610bd76d0d344722a4e71c7636c71d80e9e11813bf330bfe44e
+  sha256: 58aa250af3c7e70fa0ee640f2afbc9fb78a60e556853247281a9c58efba311d6
   patches:
     # Fiftyone pins some packages that the version is too old and not available in conda
     - 0000-relax-deps.patch
