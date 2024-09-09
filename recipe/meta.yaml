@@ -9,12 +9,8 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fiftyone-{{ version }}.tar.gz
   sha256: 58aa250af3c7e70fa0ee640f2afbc9fb78a60e556853247281a9c58efba311d6
   patches:
-    # Fiftyone pins some packages that the version is too old and not available in conda
-    - 0000-relax-deps.patch
     # Fiftyone by default ships with their own mongodb (fiftyone-db) to store dataset data
     - 0000-dropin-fiftyone-db.patch
-    # Basically a backport of https://github.com/voxel51/fiftyone/pull/4697
-    - 0000-allow-newer-strawberry.patch
 
 build:
   noarch: python
