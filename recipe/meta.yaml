@@ -1,5 +1,5 @@
 {% set name = "fiftyone" %}
-{% set version = "0.24.1" %}
+{% set version = "0.25.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fiftyone-{{ version }}.tar.gz
-  sha256: 451b4f24496ee610bd76d0d344722a4e71c7636c71d80e9e11813bf330bfe44e
+  sha256: 58aa250af3c7e70fa0ee640f2afbc9fb78a60e556853247281a9c58efba311d6
   patches:
-    # Fiftyone pins some packages that the version is too old and not available in conda
-    - 0000-relax-deps.patch
     # Fiftyone by default ships with their own mongodb (fiftyone-db) to store dataset data
     - 0000-dropin-fiftyone-db.patch
-    # Basically a backport of https://github.com/voxel51/fiftyone/pull/4697
-    - 0000-allow-newer-strawberry.patch
 
 build:
   noarch: python
@@ -30,7 +26,7 @@ requirements:
     - setuptools
     - wheel
     - pip
-    - fiftyone-brain >=0.16.1,<0.17
+    - fiftyone-brain >=0.17.0,<0.18
   run:
     - python >=3.6
     - aiofiles
@@ -56,6 +52,7 @@ requirements:
     - plotly >=4.14
     - pprintpp
     - psutil
+    - pydash
     - pymongo >=3.12
     - pytz
     - pyyaml
@@ -72,9 +69,9 @@ requirements:
     - tabulate
     - xmltodict
     - universal-analytics-python3 >=1.0.1,<2
-    - fiftyone-brain >=0.16.1,<0.17
+    - fiftyone-brain >=0.17.0,<0.18
     - mongodb >=4.4 # https://docs.voxel51.com/user_guide/config.html#using-a-different-mongodb-version
-    - voxel51-eta >=0.12.6,<0.13
+    - voxel51-eta >=0.12.7,<0.13
     - opencv
 
 test:
