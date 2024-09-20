@@ -1,5 +1,5 @@
 {% set name = "fiftyone" %}
-{% set version = "0.25.1" %}
+{% set version = "0.25.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fiftyone-{{ version }}.tar.gz
-  sha256: 58aa250af3c7e70fa0ee640f2afbc9fb78a60e556853247281a9c58efba311d6
+  sha256: 65f101f497794e610dfac3b69a1dcd943865bef8bdf5426f7faa80b345cb2a50
   patches:
     # Fiftyone by default ships with their own mongodb (fiftyone-db) to store dataset data
     - 0000-dropin-fiftyone-db.patch
@@ -53,7 +53,7 @@ requirements:
     - pprintpp
     - psutil
     - pydash
-    - pymongo >=3.12
+    - pymongo >=3.12,<4.9
     - pytz
     - pyyaml
     - regex
