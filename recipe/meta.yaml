@@ -53,7 +53,7 @@ requirements:
     - pprintpp
     - psutil
     - pydash
-    - pymongo >=3.12
+    - pymongo >=3.12,<4.9
     - pytz
     - pyyaml
     - regex
