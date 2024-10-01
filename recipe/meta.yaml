@@ -1,5 +1,5 @@
 {% set name = "fiftyone" %}
-{% set version = "0.25.2" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fiftyone-{{ version }}.tar.gz
-  sha256: 65f101f497794e610dfac3b69a1dcd943865bef8bdf5426f7faa80b345cb2a50
+  sha256: 9f61aabff71606cfc0b224465f0fea0cac1b2bf64895948bfa40c8c4c928da4a
   patches:
     # Fiftyone by default ships with their own mongodb (fiftyone-db) to store dataset data
     - 0000-dropin-fiftyone-db.patch
