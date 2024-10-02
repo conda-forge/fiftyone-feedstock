@@ -21,14 +21,14 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.9
     - importlib-metadata
     - setuptools
     - wheel
     - pip
     - fiftyone-brain >=0.17.0,<0.18
   run:
-    - python >=3.6
+    - python >=3.9
     - aiofiles
     - argcomplete
     - beautifulsoup4
@@ -71,7 +71,7 @@ requirements:
     - universal-analytics-python3 >=1.0.1,<2
     - fiftyone-brain >=0.17.0,<0.18
     - mongodb >=4.4 # https://docs.voxel51.com/user_guide/config.html#using-a-different-mongodb-version
-    - voxel51-eta >=0.12.7,<0.13
+    - voxel51-eta >=0.13.0,<0.14
     - opencv
 
 test:
