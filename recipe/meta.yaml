@@ -1,12 +1,13 @@
 {% set name = "fiftyone" %}
 {% set version = "1.0.2" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fiftyone-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fiftyone-{{ version }}.tar.gz
   sha256: 3cb84d9e81a0af3deede124d2d95a3208791dfcf4a5ec90b61db491810492004
   patches:
     # Fiftyone by default ships with their own mongodb (fiftyone-db) to store dataset data
@@ -21,14 +22,14 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python >={{ python_min }}
     - importlib-metadata
     - setuptools
     - wheel
     - pip
     - fiftyone-brain >=0.17.0,<0.18
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - aiofiles
     - argcomplete
     - beautifulsoup4
@@ -82,6 +83,7 @@ test:
     - pip check
     - fiftyone --help
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
