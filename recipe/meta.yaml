@@ -22,14 +22,14 @@ build:
 
 requirements:
   host:
-    - python >={{ python_min }}
+    - python {{ python_min }}
     - importlib-metadata
     - setuptools
     - wheel
     - pip
     - fiftyone-brain >=0.17.0,<0.18
   run:
-    - python >={{ python_min }}
+    - python {{ python_min }}
     - aiofiles
     - argcomplete
     - beautifulsoup4
