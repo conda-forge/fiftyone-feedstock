@@ -1,5 +1,5 @@
 diff --git a/fiftyone/constants.py b/fiftyone/constants.py
-index aed1b25..e7ca414 100644
+index 893204ef9..f76edeabd 100644
 --- a/fiftyone/constants.py
 +++ b/fiftyone/constants.py
 @@ -8,6 +8,7 @@ Package-wide constants.
@@ -10,10 +10,11 @@ index aed1b25..e7ca414 100644
  
  from packaging.version import Version
  
-@@ -88,11 +89,7 @@ DEFAULT_COLOR_SCHEME = {
+@@ -87,12 +88,7 @@ DEFAULT_COLOR_SCHEME = {
+     "default_mask_targets": [],
  }
  
- # MongoDB setup
+-# MongoDB setup
 -try:
 -    from fiftyone.db import FIFTYONE_DB_BIN_DIR
 -except ImportError:
@@ -23,24 +24,23 @@ index aed1b25..e7ca414 100644
  
  DEFAULT_DB_DIR = os.path.join(FIFTYONE_CONFIG_DIR, "var", "lib", "mongo")
  MIGRATIONS_PATH = os.path.join(FIFTYONE_CONFIG_DIR, "migrations")
-
 diff --git a/setup.py b/setup.py
-index f5bc265a8..14e9359b2 100644
+index c4715aaee..cdd725d76 100644
 --- a/setup.py
 +++ b/setup.py
 @@ -46,7 +46,7 @@ INSTALL_REQUIRES = [
      # https://plotly.com/python/static-image-export/
      "kaleido!=0.2.1.post1",
      "matplotlib",
--    "mongoengine==0.29.1",
+-    "mongoengine==0.24.2",
 +    "mongoengine",
      "motor>=2.5",
      "numpy",
      "packaging",
-@@ -74,7 +74,6 @@ INSTALL_REQUIRES = [
+@@ -75,7 +75,6 @@ INSTALL_REQUIRES = [
      "pydash",
      # internal packages
-     "fiftyone-brain>=0.17.0,<0.18",
+     "fiftyone-brain>=0.18.0,<0.19",
 -    "fiftyone-db>=0.4,<2.0",
      "voxel51-eta>=0.13.0,<0.14",
  ]
