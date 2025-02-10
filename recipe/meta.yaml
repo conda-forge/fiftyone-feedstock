@@ -27,7 +27,7 @@ requirements:
     - setuptools
     - wheel
     - pip
-    - fiftyone-brain >=0.17.0,<0.18
+    - fiftyone-brain >=0.19.0,<0.20
   run:
     - python >={{ python_min }}
     - aiofiles
@@ -73,7 +73,7 @@ requirements:
     - universal-analytics-python3 >=1.0.1,<2
     - fiftyone-brain >=0.18.0,<0.19
     - mongodb >=4.4 # https://docs.voxel51.com/user_guide/config.html#using-a-different-mongodb-version
-    - voxel51-eta >=0.13.0,<0.14
+    - voxel51-eta >=0.14.0,<0.15
     - opencv
 
 test:
