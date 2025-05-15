@@ -72,6 +72,7 @@ requirements:
     - tqdm
     - xmltodict
     - universal-analytics-python3 >=1.0.1,<2
+    - pydash
     - fiftyone-brain >=0.21.2,<0.22
     - mongodb >=4.4 # https://docs.voxel51.com/user_guide/config.html#using-a-different-mongodb-version
     - voxel51-eta >=0.14.0,<0.15
